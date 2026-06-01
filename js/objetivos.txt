@@ -1,0 +1,9 @@
+Pasos
+0- pre cargar objetos
+1- Al apretar el boton de agregar del catalogo, agregar al carrito
+2- identificar el nombre en el array de objetos("base de datos"), identificarlo y extraer datos
+3- en el carrito agregar el codigo html de la card, rellenando con los datos del objeto y ir sumando el total
+4-cargar formulario con codigo html + el funcionamiento del boton continuar compra
+5-mostrar resumen con total de compra, datos de lo comprado y informacion del cliente
+6-Mostrar cartel hecho en html de compra finalizada en verde, y luego vaciar todo para que el carrito quede de 0 como si se inicara nueva compra
+
