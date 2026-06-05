@@ -6,51 +6,194 @@
     <title>Carrito</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-        <header>
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./Catalogo.html">Catalogo</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./Carrito.html">Carrito</a>
-            </li>
-        </ul>
+    <header>
+            <p >AMMA</p>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Catalogo.html">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Carrito.html">
+                        <div class="carritoCompras">
+                            <img src="../img/carroDeCompra1.png" alt="" class="carritoPrincipal">
+                            <img src="../img/CarritoDeCompra2.png" alt="" class="carritoHover">
+                        </div>
+                    </a>
+                </li>
+            </ul>
     </header>
     <main>
-    
-        <!-- Idea de estructura
-         Crear un contenedor para las cards y luego ir agregando cards, en caso de no haber nada que no muestre nada-->
+        <div class="container-md my-5">
+            <!--Carrito de compras-->
+            <div class="contenedorCarrito border border-2 border-dark rounded">
+            
 
-        <div class="card-cont">
-            <!-- un texto por ejemplo "Carrito"-->
-            <div class="cart-item"><!-- una card sola por articulo -->
-                <!-- Imagen pequeña del articulo-->
-                <div class="cart-item-info">
-                        <!-- la info, con flexbox-->
+                <p>No hay articulos en el carrito</p>
+                <div class="card-cont">
+                    <div class="cart-item"> 
+                    
+                        <img src="../img/12.jpeg" alt="imagen de producto" class="imagenproducto">
+                        <div class="cart-item-info">
+                            <p class="DescripcionElemento">Nombre:</p><p></p>
+                            <p class="DescripcionElemento">Precio por unidad:</p><p></p>
+                            <p class="DescripcionElemento">Cantidad:</p><p></p>
+                            <p class="DescripcionElemento">Precio final:</p><p></p>
+                        </div>
+                        <button> <img src="../img/TachitoIcono.png" alt=""></button>   
+                    </div>
                 </div>
-                <!-- El boton de borrar el item-->
-                
+                <div class="contenedorControles">
+                    <div class="totalCarrito">
+                        <p>Total a pagar:</p><p></p>
+                        <button class="btnPagar">Pagar</button>
+                    </div>
+                    <button class="vaciarCarrito">Vaciar carrito</button>
+                </div>
             </div>
-            <!-- boton para continuar con la compra-->
-        </div>
+        
+            <!-- Formulario de datos de envío y facturación -->
+            <form class="mt-5 p-4 border border-2 border-dark rounded bg-light">
+                <h3 class="mb-4">Datos de Facturación y Envío</h3>
+                <!-- Fila para Nombre y Apellido -->
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label fw-bold">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Juan" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="apellido" class="form-label fw-bold">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" placeholder="Pérez" required>
+                    </div>
+                </div>
+                <!-- Fila para Dirección -->
+                <div class="mb-3">
+                    <label for="direccion" class="form-label fw-bold">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" placeholder="Calle Falsa 123, Piso 1 Dpto B" required>
+                </div>
+                <!-- Fila para Provincia, Ciudad y Código Postal -->
+                <div class="row g-3 mb-3">
+                    <div class="col-md-5">
+                        <label for="provincia" class="form-label fw-bold">Provincia</label>
+                        <input type="text" class="form-control" id="provincia" placeholder="Buenos Aires" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="ciudad" class="form-label fw-bold">Ciudad</label>
+                        <input type="text" class="form-control" id="ciudad" placeholder="La Plata" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="codigoPostal" class="form-label fw-bold">Código Postal</label>
+                        <input type="text" class="form-control" id="codigoPostal" placeholder="1900" required>
+                    </div>
+                </div>
+                <!-- Fila para el Tipo de Envío (Selector/Dropdown) -->
+                <div class="mb-4">
+                    <label for="tipoEnvio" class="form-label fw-bold">Tipo de envío</label>
+                    <select class="form-select" id="tipoEnvio" required>
+                        <option value="" disabled selected>Seleccioná una opción...</option>
+                        <option value="domicilio">Envío a domicilio</option>
+                        <option value="local">Retiro en el local</option>
+                    </select>
+                </div>
+                <!-- Botón de Continuar -->
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-dark btn-lg">Continuar</button>
+                </div>
+            </form>
 
-        <!-- Siguientes pasos-->
+
+            <!--Resumen de compra-->
+            <div class="card mt-5  w-100 border border-2 border-dark rounded bg-white">
+                <div class="card-header  text-white p-3 d-flex justify-content-between align-items-center">
+                    <h4 class="margin-0 font-family-cursiva">AMMA INTIMATES</h4>
+                    <small class="text-muted text-dark fw-bold">Resumen de Operación</small>
+                </div>
+
+
+                <div class="card-body p-4">
+                    <h5 class="text-uppercase fw-bold text-secondary mb-3" style="font-size: 0.9rem; letter-spacing: 1px;">Artículos a llevar</h5>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            <div>
+                                <h6 class="my-0 fw-bold">Corpiño Encaje Negro:</h6>
+                                <small class="text-muted ms-3">Cantidad: 2</small>
+                            </div>
+                            <span class="text-muted">$30.000</span>
+                        </li>
+            
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            <div>
+                                <h6 class="my-0 fw-bold">Colaless Beige:</h6>
+                                <small class="text-muted ms-3">Cantidad: 1</small>
+                            </div>
+                            <span class="text-muted">$12.000</span>
+                        </li>
+                    </ul>
+
+                    <hr class="my-4">
+
+                    <h5 class="text-uppercase fw-bold text-secondary mb-3" style="font-size: 0.9rem; letter-spacing: 1px;">Datos de entrega y facturación</h5>
+                    <div class="row g-3 mb-4 text-muted" style="font-size: 0.95rem;">
+                        <div class="col-sm-5">
+                            <p class="mb-1"><strong class="text-dark">Cliente:</strong> <span id="resumen-cliente">Juan Pérez</span></p>
+                            <p class="mb-1" ><strong class="text-dark ms-3">Destino:</strong> <span id="resumen-destino">Calle Falsa 123, Piso 1 Dpto B</span></p>
+                        </div>
+                        <div class="col-sm-7">
+                            <p class="mb-1"><strong class="text-dark">Localidad:</strong> <span id="resumen-localidad">La Plata, Buenos Aires (1900)</span></p>
+                            <p class="mb-1"><strong class="text-dark ms-3">Método de entrega:</strong> <span id="resumen-envio">Envío a domicilio</span></p>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="bg-light p-3 rounded border border-1 border-dark-subtle d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted">Subtotal productos:</span>
+                            <span class="text-muted ms-1" id="resumen-subtotal">$42.000</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted ">Costo de envío: </span>
+                            <span class="text-muted ms-1" id="resumen-costo-envio">$2.500</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-2 border-top border-dark-subtle">
+                            <span class="fw-bold fs-5 text-dark">Total definitivo:</span>
+                            <strong class="fs-5 text-dark ms-1" id="resumen-total">$44.500</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button class="btn btn-dark btn-lg " id="btn-finalizar-compra">Finalizar Compra</button>
+                    </div>        
+                </div>
+            </div>
+
+
+        </div>
+        
+        
+        
+
+
+
+        <!-- Siguiente pasos-->
         <!-- Formulario para obtener datos y crear un objeto del comprador -->
+
+
 
         <!-- Imprimir resumen con datos de comprador, articulos que se lleva junto con su precion unitario y el total a pagar-->
          <!-- Boton para finalizar compra, muestra mensaje de compra realizada y luego reinicia el carrito-->
     </main>
     <footer>
-
         <p>AMMA</p>
-        <a href="https://www.instagram.com/amma.intimates/?hl=es"target="_blank"><img src="../img/LogoInstagram.png" alt="Icono de instagram" ></a>
-
+        <div>
+            <a href="https://www.instagram.com/amma.intimates/?hl=es"target="_blank"><img src="../img/LogoInstagram.png" alt="Icono de instagram" ></a>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 

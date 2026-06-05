@@ -1,0 +1,30 @@
+@use "./variables" as *;
+*{
+     margin: 0; 
+     padding: 0;
+}
+
+// 1. Aseguramos que la estructura base ocupe todo el alto disponible
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  // Convertimos el body en un contenedor Flexbox vertical
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // 100vh significa el 100% del alto de la ventana del navegador
+}
+
+// 2. La magia para empujar el footer
+main {
+  // flex-grow: 1 le dice al <main> que ocupe TODO el espacio libre vertical que quede,
+  // obligando al footer a bajarse al límite inferior de la pantalla.
+  flex-grow: 1; 
+}
+
+footer {
+  // Opcional: asegurás que mantenga su espacio sin encogerse
+  flex-shrink: 0;
+}
