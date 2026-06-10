@@ -99,7 +99,7 @@ header .carritoCompras:hover .carritoHover {
 }
 
 .card {
-  width: 18rem;
+  margin: 1rem;
   padding: 0.25rem;
   background-color: #FFB8B8;
 }

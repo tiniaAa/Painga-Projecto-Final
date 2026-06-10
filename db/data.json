@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "nombre": "Conjunto Beige",
+        "precio": 15000,
+        "imagen": "../img/ConjuntoBeige.jpeg",
+        "categoria": "Conjunto",
+        "stock": 5,
+        "descripcion": "Conjunto Beige Premium "
+    },
+    {
+        "id":2,
+        "nombre":"Conjunto Rosa Pastel",
+        "precio":10000,
+        "imagen":"../img/ConjuntoRosaPastel.jpeg",
+        "categoria": "Conjunto",
+        "stock":5,
+        "descripcion":"Conjunto Rosa pastel Premium"
+    },
+    {
+        "id":3,
+        "nombre":"Conjunto Rosa Transparente",
+        "precio":25000,
+        "imagen":"../img/ConjuntoRosaTransparente.jpeg",
+        "categoria": "Conjunto",
+        "stock":5,
+        "descripcion":"Conjunto Rosa Transparente Premium"
+    },
+    {
+        "id":4,
+        "nombre":"Pack de Colales",
+        "precio":1000,
+        "imagen":"../img/PackColales.jpeg",
+        "categoria": "Pack",
+        "stock":10,
+        "descripcion":"Pack de bombachas colales"
+    },
+    {
+        "id":5,
+        "nombre":"Pack de Colales",
+        "precio":1000,
+        "imagen":"../img/PackColales.jpeg",
+        "categoria": "Pack",
+        "stock":10,
+        "descripcion":"Pack de bombachas colales"
+    },
+    {
+        "id":6,
+        "nombre":"Colales Grande Beige",
+        "precio":1000,
+        "imagen":"../img/ColalesGrandeBeige.jpeg",
+        "categoria": "Elemento",
+        "stock":6,
+        "descripcion":"Colales Grande Beige Premium comoda"
+    },
+    {
+        "id":7,
+        "nombre":"Pack Tanga de colores",
+        "precio":1000,
+        "imagen":"../img/PackTanga.jpeg",
+        "categoria": "Pack",
+        "stock":15,
+        "descripcion":"Pack de tangas ajustables de distintos colores"
+    },
+    {
+        "id":8,
+        "nombre":"Conjunto Negro Transparente",
+        "precio":10000,
+        "imagen":"../img/ConjuntoNegroTransparente.jpeg",
+        "categoria": "Conjunto",
+        "stock":15,
+        "descripcion":"Conjunto de lenceria negro transparente"
+    }
+    
+]
