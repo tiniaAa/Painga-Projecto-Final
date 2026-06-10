@@ -4,7 +4,7 @@ let Catalogo=[];
 const URLcatalogo ="../db/data.json";
 
 
-const rowContainer = document.querySelector(".row")
+const rowContainer = document.getElementById("fila-catalogo")
 //
 
 function ObtenerDatos(){
